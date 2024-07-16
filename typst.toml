@@ -1,18 +1,14 @@
-# for a description of available keys, see https://github.com/typst/packages/?tab=readme-ov-file#package-format
-
 [package]
-name = ""
+name = "unibs-thesis"
 version = "0.1.0"
-entrypoint = "src/lib.typ"
-authors = []
-license = "Unlicense"
-description = ""
-homepage = ""
-repository = ""
-keywords = []
-categories = []
-disciplines = []
-compiler = ""
+entrypoint = "lib/lib.typ"
+repository = "https://github.com/Mik3rizzo/typst-unibs-thesis"
+authors = ["Michele Rizzo"]
+license = "GPL-3.0"
+description = "A modern thesis template for the University of Brescia."
+keywords = ["thesis", "unibs", "university", "Brescia", "Università degli Studi di Brescia"]
+categories = ["thesis"]
+compiler = "0.11"
 exclude = [
 	".github",
 	"docs",
@@ -22,10 +18,7 @@ exclude = [
 	"Justfile",
 ]
 
-# [template]
-# path = "template"
-# entrypoint = "main.typ"
+[template]
+path = "template"
+entrypoint = "main.typ"
 # thumbnail = "thumbnail.png"
-
-# [tool.mytool]
-# foo = "bar"

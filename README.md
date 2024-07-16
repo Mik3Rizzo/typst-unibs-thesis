@@ -1,64 +1,36 @@
-# The `my-package` Package
-<div align="center">Version 0.1.0</div>
+# Unibs Thesis Template - 0.1.0
 
-A short description about the project and/or client.
-
-## Template adaptation checklist
-
-- [ ] Fill out `README.md`
-  - Change the `my-package` package name, including code snippets
-  - Check section contents and/or delete sections that don't apply
-- [ ] Check and/or replace `LICENSE` by something that suits your needs
-- [ ] Fill out `typst.toml`
-  - See also the [typst/packages README](https://github.com/typst/packages/?tab=readme-ov-file#package-format)
-- [ ] Adapt Repository URLs in `CHANGELOG.md`
-  - Consider only committing that file with your first release, or removing the "Initial Release" part in the beginning
-- [ ] Adapt or deactivate the release workflow in `.github/workflows/release.yml`
-  - to deactivate it, delete that file or remove/comment out lines 2-4 (`on:` and following)
-  - to use the workflow
-    - [ ] check the values under `env:`, particularly `REGISTRY_REPO`
-    - [ ] if you don't have one, [create a fine-grained personal access token](https://github.com/settings/tokens?type=beta) with [only Contents permission](https://stackoverflow.com/a/75116350/371191) for the `REGISTRY_REPO`
-    - [ ] on this repo, create a secret `REGISTRY_TOKEN` (at `https://github.com/[user]/[repo]/settings/secrets/actions`) that contains the so created token
-
-    if configured correctly, whenever you create a tag `v...`, your package will be pushed onto a branch on the `REGISTRY_REPO`, from which you can then create a pull request against [typst/packages](https://github.com/typst/packages/)
-- [ ] remove/replace the example test case
-- [ ] (add your actual code, docs and tests)
-- [ ] remove this section from the README
+Typst thesis template for the University of Brescia (UniBS).
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on the typst web app. Perhaps a short code example on importing the package and a very simple teaser usage.
+To use the template in your project:
 
 ```typ
-#import "@preview/my-package:0.1.0": *
-
-#show: my-show-rule.with()
-#my-func()
+#import "@preview/unibs-thesis:0.1.0": thesis
 ```
 
-### Installation
-
-A step by step guide that will tell you how to get the development environment up and running. This should example how to clone the repo and where to (maybe a link to the typst documentation on it), along with any pre-requisite software and installation steps.
-
-```
-$ First step
-$ Another step
-$ Final step
-```
+Please note that, as suggested by the University of Brescia, the template uses _Avenir_ and _Avenir Book_ fonts, which can be obtained [here](https://globalfonts.pro/global_files/5c30d7d12872184070bc871e/avenir.zip).
 
 ## Usage
 
-A more in-depth description of usage. Any template arguments? A complicated example that showcases most if not all of the functions the package provides? This is also an excellent place to signpost the manual.
+A very basic usage:
 
 ```typ
-#import "@preview/my-package:0.1.0": *
+#show: thesis.with(
+  department: "Department of Information Engineering",  
+  degree: (type: "Master's degree", name: "Computer Engineering"),
+  title: "Thesis Title", 
+  supervisor: "Prof. Mario Rossi", 
+  candidate: (name: "Ilaria Bianchi", id: "706252"), 
+  academic-year: "2023/2024", 
 
-#let my-complicated-example = ...
+  abstract: #lorem(100), 
+  bibliography: bibliography("bib.yaml", full: true)
+)
+
+= Introduction
+#lorem(300)
 ```
 
-## Additional Documentation and Acknowledgments
-
-* Project folder on server:
-* Confluence link:
-* Asana board:
-* etc...
+A manual will be added in the future.

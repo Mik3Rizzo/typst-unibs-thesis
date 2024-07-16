@@ -1,4 +1,4 @@
-# [unreleased](https://github.com/author/my-package/releases/tags/)
+# [unreleased](https://github.com/Mik3Rizzo/typst-unibs-thesis/releases/tags/)
 ## Added
 
 ## Removed
@@ -9,5 +9,5 @@
 
 ---
 
-# [v0.1.0](https://github.com/author/my-package/releases/tags/v0.1.0)
+# [v0.1.0](https://github.com/Mik3Rizzo/typst-unibs-thesis/releases/tags/v0.1.0)
 Initial Release
