@@ -1,6 +1,6 @@
 # Unibs Thesis Template - 0.1.0
 
-Typst thesis template for the University of Brescia (UniBS).
+Typst thesis template for the University of Brescia.
 
 ## Getting Started
 
@@ -25,7 +25,7 @@ A very basic usage:
   candidate: (name: "Ilaria Bianchi", id: "706252"), 
   academic-year: "2023/2024", 
 
-  abstract: #lorem(100), 
+  abstract: lorem(100), 
   bibliography: bibliography("bib.yaml", full: true)
 )
 
