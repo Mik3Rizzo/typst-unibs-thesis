@@ -88,9 +88,6 @@
 
   // Body
   show-body(body: body)
-
-  // BUG acknowledgements and bibliography without numbering
-  // BUG acknowledgements without justify 
   
   // Acknowledgements
   show-acknowledgements(title: strings.acknowledgements-title, acknowledgements: acknowledgements)

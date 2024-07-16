@@ -8,7 +8,7 @@ license = "GPL-3.0"
 description = "A modern thesis template for the University of Brescia."
 keywords = ["thesis", "unibs", "university", "Brescia", "Università degli Studi di Brescia"]
 categories = ["thesis"]
-compiler = "0.11"
+compiler = "0.11.0"
 exclude = [
 	".github",
 	"docs",

@@ -157,6 +157,7 @@
 #let show-abstract(abstract: none) = {
 
   // Abstract Settings
+  // TODO may be in the outline? 
   if abstract != none {
 
     set page(header: none)
@@ -174,7 +175,10 @@
 
 #let show-acknowledgements(title: none, acknowledgements: none) = {
   
-  // BUG page numbers missing
+  // Acknowledgements Settings
+  set page(numbering: "1", number-align: center)
+  set par(justify: true)
+
   if acknowledgements != none {
     heading(outlined: true)[
       #title
@@ -184,7 +188,10 @@
 }
 
 #let show-bibliography(bibliography: none) = {
-  // BUG page numbers missing
+  
+  // Bibliography Settings
+  set page(numbering: "1", number-align: center)
+
   if bibliography != none {
     bibliography
   }
