@@ -33,4 +33,4 @@ A very basic usage:
 #lorem(300)
 ```
 
-A manual will be added in the future.
+Please, read the [manual](docs/manual.typ) for more details an customization options.

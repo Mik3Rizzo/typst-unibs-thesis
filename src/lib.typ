@@ -3,12 +3,33 @@
 #import "show.typ": *
 #import "custom.typ": *
 
+/// The main template function. Your document will generally start with ```typ #show: thesis(...)```, 
+/// which it already does after initializing the template.
+/// 
+/// - language (string): Language in which the thesis is written; `"it"` and `"en"` are supported. 
+///   The choice of language influences certain texts on the title page and in headings.
+/// - logo (string): Path to the logo. The default is the logo of the University of Brescia.
+/// - department (content, string): Department's name.
+/// - degree (dictionary): Type and name of the degree.
+/// - title (string): Thesis' title.
+/// - supervisor (content, string): Thesis' supervisor.
+/// - co-supervisor (content, string): Thesis' co-supervisor.
+/// - candidate (dictionary): Name and ID of the candidate.
+/// - academic-year (string): Academic year, like `"2023-2024"`.
+/// - strings (dictionary): Strings used to change language; for example, for italian you should set the fields like this: ```typ dissertation: "Tesi di Laurea", supervisor: "Relatore", co-supervisor: "Correlatore", candidate: "Laureando", candidate-id: "Matricola", academic-year: "Anno Accademico", chapter: "Capitolo", outline-title: "Indice", acknowledgements-title: "Ringraziamenti"```.
+/// - abstract (content, string): Thesis' abstract.
+/// - dedication (content, string): Thesis' dedication.
+/// - acknowledgements (content, string): Thesis' acknowledgements.
+/// - bibliography (content, string): Thesis' bibliography. Should be something like ```typ #bibliography("bib.yaml")```.
+/// - body (content): Thesis' body.
+/// 
+/// -> function
 #let thesis(
   language: "en", 
   logo: "img/unibs_logo.svg", 
 
   department: "Department of Something",  
-  degree: (type: "Master's degree", name: "Something"),
+  degree: (type: "Master's degree", name: "Something Engineering"),
   title: "Thesis Title", 
   supervisor: "Prof. Name Surname", 
   co-supervisor: none,
@@ -37,6 +58,8 @@
   body
 ) = {
 
+  // TODO do dynamic language management
+  
   // Document Settings
   set document(author: candidate.name, title: title)
   set page(paper: "a4", margin: (top: 3.5cm, rest: 3cm)) // TODO change
