@@ -1,11 +1,9 @@
-// Repeat the given content to fill the full space.
-//
-// Parameters:
-// - gap: The gap between repeated items. (Default: none)
-// - justify: Whether to increase the gap to justify the items. (Default: false)
-//
-// Returns: The repeated content.
-
+/// Repeats the given content to fill the full space.
+/// 
+/// - gap (length, ratio): The gap between repeated items.
+/// - justify (boolean): Whether to increase the gap to justify the items.
+/// 
+/// -> function
 #let repeat(
   gap: none,
   justify: false,

@@ -1,5 +1,18 @@
 #import "utils.typ": repeat
 
+/// Shows the cover.
+/// 
+/// - logo (string): Path to the logo. The default is the logo of the University of Brescia.
+/// - department (content, string): Department's name.
+/// - degree (dictionary): Type and name of the degree.
+/// - title (string): Thesis' title.
+/// - supervisor (content, string): Thesis' supervisor.
+/// - co-supervisor (content, string): Thesis' co-supervisor.
+/// - candidate (dictionary): Name and ID of the candidate.
+/// - academic-year (string): Academic year, like `"2023-2024"`.
+/// - strings (dictionary): Strings used to change language. Should be a variable from the `strings` module, like `en_strings` or `it_strings` or a custom dictionary.
+/// 
+/// -> function
 #let show-cover(
   logo: "", 
   department: "",  
@@ -68,8 +81,6 @@
       ]
     }
 
-    // TODO align supervisor and co-supervisor names
-
   ]
 
   align(right)[
@@ -102,6 +113,11 @@
 
 }
 
+/// Shows the dedication.
+/// 
+/// - dedication (content, string): Dedication's content.
+/// 
+/// -> function
 #let show-dedication(dedication: none) = {
   
   // Dedication Settings
@@ -115,6 +131,11 @@
   // If the dedication is none, It would be printed a blank page
 }
 
+/// Shows the outline.
+/// 
+/// - title (string): Outline's title.
+/// 
+/// -> function
 #let show-outline(title: none) = {
 
   // Outline Settings
@@ -142,6 +163,11 @@
 
 }
 
+/// Shows the body.
+/// 
+/// - body (content, string): Thesis' body.
+/// 
+/// -> function
 #let show-body(body: none) = {
 
   // Body Settings
@@ -154,6 +180,11 @@
   body
 }
 
+/// Shows the abstract.
+/// 
+/// - abstract (content, string): Thesis' abstract.
+/// 
+/// -> function
 #let show-abstract(abstract: none) = {
 
   // Abstract Settings
@@ -173,6 +204,12 @@
   }
 }
 
+/// Shows the acknowledgements.
+/// 
+/// - title (string): Acknowledgements' title.
+/// - acknowledgements (content, string): Acknowledgements' content.
+/// 
+/// -> function
 #let show-acknowledgements(title: none, acknowledgements: none) = {
   
   // Acknowledgements Settings
@@ -187,6 +224,11 @@
   }
 }
 
+/// Shows the bibliography.
+/// 
+/// - bibliography (content): The bibliography obtained calling ```typst #bibliography()```.
+/// 
+/// -> function
 #let show-bibliography(bibliography: none) = {
   
   // Bibliography Settings

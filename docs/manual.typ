@@ -22,7 +22,7 @@
 
 = Introduction
 
-This template is aimed at students of the University of Brescia. 
+This thesis template is aimed at students of the University of Brescia. 
 
 You can use it in the Typst *web app*, creating a new project. The short way to do so is the following link: #link("https://typst.app/?template=" + package-meta.name + "&version=latest").
 
@@ -34,7 +34,7 @@ You can also use it *locally*, with the following command:
   "typst init @preview/" + package-meta.name
 )
 
-Please, take a look at the document created by the template. The usage should be easy and clean at a first sight. If you have not yet initialized the template, a rendered version is linked in the README. If you are new to Typst, also check out the Typst documentation: https://typst.app/docs/.
+Please, take a look at the document created by the template: the usage should be easy and clear at a first sight. If you are new to Typst, check out the documentation: https://typst.app/docs/.
 
 The rest of this manual shows the functions offered by this package: it is useful if you want to know what customization options are available, or if you're not sure what parts of the template package do.
 
@@ -45,7 +45,7 @@ As a university-specific template, this package may not offer enough configurabi
 
 == `unibs-thesis.lib`
 
-The template's main module. All functions that need to be called are directly exported from this module.
+The template's main module. It contains the one and only function that should be called from your project.
 
 #{
   let module = tidy.parse-module(
@@ -75,7 +75,7 @@ This module contains `strings` variables for various languages. Currently only e
   )
 }
 
-It is possible to define a custom `strings` dictionary, for example:
+It is possible to define a custom `strings` dictionary respecting the needed fields, for example:
 
 ```typst
 custom_strings = (
@@ -91,7 +91,54 @@ custom_strings = (
 )
 ```
 
+== `unibs-thesis.show`
+
+This module contains visualization methods, called by the `lib` module.
+
+#{
+  let module = tidy.parse-module(
+    read("/src/show.typ"),
+    scope: scope,
+  )
+  tidy.show-module(
+    module,
+    sort-functions: none,
+    style: tidy.styles.minimal,
+  )
+}
+
+== `unibs-thesis.custom`
+
+This module contains custom ```typst #show``` methods for various elements, called by the `show` module. 
+
+#{
+  let module = tidy.parse-module(
+    read("/src/custom.typ"),
+    scope: scope,
+  )
+  tidy.show-module(
+    module,
+    sort-functions: none,
+    style: tidy.styles.minimal,
+  )
+}
+
+== `unibs-thesis.utils`
+
+This module contains utils methods.
+
+#{
+  let module = tidy.parse-module(
+    read("/src/utils.typ"),
+    scope: scope,
+  )
+  tidy.show-module(
+    module,
+    sort-functions: none,
+    style: tidy.styles.minimal,
+  )
+}
 
 == `unibs-thesis.img`
 
-Contains images used in the template, like the logo of the University of Brescia.
+This directory contains images used in the template, like the logo of the University of Brescia.

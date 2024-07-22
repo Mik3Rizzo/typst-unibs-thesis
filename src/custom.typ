@@ -1,3 +1,8 @@
+/// Custom heading.
+/// 
+/// - it (content): Content.
+/// 
+/// -> function
 #let custom-heading(it) = {
   block([
     #set text(fill: gray, weight: "bold")
@@ -8,6 +13,12 @@
   ], above: 1.5em, below: 1em)
 }
 
+/// Custom level 1 heading.
+/// 
+/// - it (content): Content.
+/// - chapter-string (string): The prefix to the chapter's number.
+/// 
+/// -> function
 #let custom-heading-level-1(it, chapter-string: "") = {
 
   block([
