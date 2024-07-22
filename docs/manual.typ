@@ -41,9 +41,13 @@ The rest of this manual shows the functions offered by this package: it is usefu
 As a university-specific template, this package may not offer enough configurability to be used at different institutions. Feel free to adapt it to you needs and also to open a Github issue or pull request.
 
 
-= Module reference
+= Modules reference
 
-== `unibs-thesis.lib`
+In this sections are showed the modules of the template. 
+
+The most relevant module is explained in the @unibs-thesis-lib: the other modules are used by the latter.
+
+== `unibs-thesis.lib` <unibs-thesis-lib>
 
 The template's main module. It contains the one and only function that should be called from your project.
 
