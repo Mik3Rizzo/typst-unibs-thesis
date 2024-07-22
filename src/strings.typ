@@ -1,4 +1,4 @@
-/// EN strings
+/// Strings for english.
 #let en_strings = (
   dissertation: "Dissertation",
   supervisor: "Supervisor",
@@ -13,7 +13,7 @@
   acknowledgements-title: "Acknowledgements"
 )
 
-/// IT strings
+/// Strings for italian.
 #let it_strings = (
   dissertation: "Tesi di Laurea",
   supervisor: "Relatore",
