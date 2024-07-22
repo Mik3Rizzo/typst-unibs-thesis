@@ -2,6 +2,7 @@
 
 #import "show.typ": *
 #import "custom.typ": *
+#import "strings.typ": *
 
 /// The main template function. Your document will generally start with ```typ #show: thesis(...)```, 
 /// which it already does after initializing the template.
@@ -16,7 +17,7 @@
 /// - co-supervisor (content, string): Thesis' co-supervisor.
 /// - candidate (dictionary): Name and ID of the candidate.
 /// - academic-year (string): Academic year, like `"2023-2024"`.
-/// - strings (dictionary): Strings used to change language; for example, for italian you should set the fields like this: ```typ dissertation: "Tesi di Laurea", supervisor: "Relatore", co-supervisor: "Correlatore", candidate: "Laureando", candidate-id: "Matricola", academic-year: "Anno Accademico", chapter: "Capitolo", outline-title: "Indice", acknowledgements-title: "Ringraziamenti"```.
+/// - strings (dictionary): Strings used to change language. Should be a variable from the `strings` module, like `en_strings` or `it_strings` or a custom dictionary.
 /// - abstract (content, string): Thesis' abstract.
 /// - dedication (content, string): Thesis' dedication.
 /// - acknowledgements (content, string): Thesis' acknowledgements.
@@ -36,19 +37,7 @@
   candidate: (name: "Name Surname", id: "123456"), 
   academic-year: "20xx/20xx", 
 
-  strings: (
-    dissertation: "Dissertation",
-    supervisor: "Supervisor",
-    co-supervisor: "Co-supervisor", 
-    candidate: "Candidate", 
-    candidate-id: "ID", 
-    academic-year: "Academic Year",
-
-    chapter: "Chapter",
-
-    outline-title: "Outline",
-    acknowledgements-title: "Acknowledgements"
-  ), 
+  strings: en_strings, 
 
   abstract: none, 
   dedication: none, 
@@ -58,7 +47,9 @@
   body
 ) = {
 
-  // TODO do dynamic language management
+  if language == "it" {
+    strings = it_strings
+  }
   
   // Document Settings
   set document(author: candidate.name, title: title)

@@ -43,7 +43,7 @@ As a university-specific template, this package may not offer enough configurabi
 
 = Module reference
 
-== `unibs-thesis`
+== `unibs-thesis.lib`
 
 The template's main module. All functions that need to be called are directly exported from this module.
 
@@ -58,6 +58,39 @@ The template's main module. All functions that need to be called are directly ex
     style: tidy.styles.minimal,
   )
 }
+
+== `unibs-thesis.strings`
+
+This module contains `strings` variables for various languages. Currently only english and italian are supported.
+
+#{
+  let module = tidy.parse-module(
+    read("/src/strings.typ"),
+    scope: scope,
+  )
+  tidy.show-module(
+    module,
+    sort-functions: none,
+    style: tidy.styles.minimal,
+  )
+}
+
+It is possible to define a custom `strings` dictionary, for example:
+
+```typst
+custom_strings = (
+  dissertation: "Tesi di Laurea", 
+  supervisor: "Relatrice", 
+  co-supervisor: "Correlatore", 
+  candidate: "Candidata", 
+  candidate-id: "Matricola", 
+  academic-year: "Anno Accademico", 
+  chapter: "Capitolo",  
+  outline-title: "Indice dei contenuti", 
+  acknowledgements-title: "Ringraziamenti"
+)
+```
+
 
 == `unibs-thesis.img`
 
