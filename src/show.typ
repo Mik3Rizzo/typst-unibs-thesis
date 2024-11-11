@@ -204,6 +204,30 @@
   }
 }
 
+/// Shows the introduction.
+/// 
+/// - introduction (content, string): Thesis' introduction.
+/// 
+/// -> function
+#let show-introduction(title: none, introduction: none) = {
+
+  // Introduction Settings
+  set heading(numbering: none)
+  set page(numbering: "i", number-align: center)
+  counter(page).update(1)
+
+  set par(justify: true)
+
+  if introduction != none {
+    
+    heading(outlined: true)[
+      #title
+    ]
+
+    introduction
+  }
+}
+
 /// Shows the acknowledgements.
 /// 
 /// - title (string): Acknowledgements' title.

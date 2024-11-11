@@ -10,6 +10,7 @@
   chapter: "Chapter",
 
   outline-title: "Outline",
+  introduction-title: "Introduction",
   acknowledgements-title: "Acknowledgements"
 )
 
@@ -25,5 +26,6 @@
   chapter: "Capitolo",
 
   outline-title: "Indice",
+  introduction-title: "Introduzione",
   acknowledgements-title: "Ringraziamenti"
 )

@@ -10,14 +10,16 @@
   academic-year: "2023/2024", 
 
   abstract: [#lorem(200)], 
-  dedication: [#lorem(6) \ #lorem(10) \ #lorem(8)], 
-  acknowledgements: [#lorem(300)],
+  introduction: [#lorem(300)],
   bibliography: bibliography("bib.yaml", full: true),
+
+  dedication: [#lorem(6) \ #lorem(10) \ #lorem(8)],
+  acknowledgements: [#lorem(300)],
 )
 
 
 // Chapters
-= Introduction
+= Chapter one
 #lorem(40)
 
 == Section
@@ -40,5 +42,5 @@
 === Subsection
 #lorem(40)
 
-= Another Chapter
+= Chapter two
 #lorem(300)

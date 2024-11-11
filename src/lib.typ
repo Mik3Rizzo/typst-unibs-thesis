@@ -19,9 +19,10 @@
 /// - academic-year (string): Academic year, like `"2023-2024"`.
 /// - strings (dictionary): Strings used to change language. Should be a variable from the `strings` module, like `en_strings` or `it_strings` or a custom dictionary.
 /// - abstract (content, string): Thesis' abstract.
+/// - introduction (content, string): Thesis' introduction.
+/// - bibliography (content, string): Thesis' bibliography. Should be something like ```typ #bibliography("bib.yaml")```.
 /// - dedication (content, string): Thesis' dedication.
 /// - acknowledgements (content, string): Thesis' acknowledgements.
-/// - bibliography (content, string): Thesis' bibliography. Should be something like ```typ #bibliography("bib.yaml")```.
 /// - body (content): Thesis' body.
 /// 
 /// -> function
@@ -38,12 +39,14 @@
   academic-year: "20xx/20xx", 
 
   strings: en_strings, 
-
+  
   abstract: none, 
-  dedication: none, 
-  acknowledgements: none,
+  introduction: none,
   bibliography: none,
 
+  dedication: none, 
+  acknowledgements: none,
+  
   body
 ) = {
 
@@ -99,6 +102,9 @@
 
   // Abstract
   show-abstract(abstract: abstract)
+
+  // Introduction
+  show-introduction(title: strings.introduction-title, introduction: introduction)
 
   // Body
   show-body(body: body)

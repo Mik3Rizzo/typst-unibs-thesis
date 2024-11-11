@@ -91,6 +91,7 @@ custom_strings = (
   academic-year: "Anno Accademico", 
   chapter: "Capitolo",  
   outline-title: "Indice dei contenuti", 
+  introduction-title: "Introduzione",
   acknowledgements-title: "Ringraziamenti"
 )
 ```
