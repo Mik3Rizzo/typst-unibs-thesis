@@ -97,11 +97,11 @@
   // Dedication
   show-dedication(dedication: dedication)
 
-  // Outline
-  show-outline(title: strings.outline-title)
-
   // Abstract
   show-abstract(abstract: abstract)
+
+  // Outline
+  show-outline(title: strings.outline-title)
 
   // Introduction
   show-introduction(title: strings.introduction-title, introduction: introduction)
