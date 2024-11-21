@@ -1,0 +1,1 @@
+#let chapter-color = rgb("#7e7e7e")

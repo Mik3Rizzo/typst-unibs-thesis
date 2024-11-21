@@ -1,3 +1,5 @@
+#import "colors.typ": chapter-color
+
 /// Custom heading.
 /// 
 /// - it (content): Content.
@@ -5,7 +7,7 @@
 /// -> function
 #let custom-heading(it) = {
   block([
-    #set text(fill: gray, weight: "bold")
+    #set text(fill: chapter-color, weight: "bold")
     #counter(heading).display()
     #h(5pt)
     #set text(fill: black)
@@ -28,7 +30,7 @@
     #if it.numbering != none {
 
       let heading-number = counter(heading).display()
-      set text(fill: gray, weight: "bold")
+      set text(fill: chapter-color, weight: "bold")
       
       block([
         #chapter-string #heading-number
