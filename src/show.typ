@@ -139,8 +139,7 @@
 #let show-outline(title: none) = {
 
   // Outline Settings
-  set page(numbering: "i")
-  counter(page).update(1)
+  set page(numbering: none)
 
   // Copied from here
   show outline.entry: it => locate(loc => style(styles => {
