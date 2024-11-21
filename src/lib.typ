@@ -117,3 +117,12 @@
 
 }
 
+
+/// Emphasizes the chapter's introduction.
+/// 
+/// - body (content, string): Chapter's introduction.
+/// 
+/// -> content
+#let chapter-introduction(body) = {
+  emph[#body]
+}
