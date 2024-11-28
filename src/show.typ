@@ -187,19 +187,19 @@
 #let show-abstract(abstract: none) = {
 
   // Abstract Settings
-  // TODO may be in the outline? 
+
   if abstract != none {
 
     set page(header: none)
+    set par(justify: true)
   
     align(center)[
       #heading(outlined: false, numbering: none)[
         #smallcaps[Abstract]
       ]
-
-      #set text(style: "italic")
-      #abstract
     ]
+
+    abstract
   }
 }
 
