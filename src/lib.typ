@@ -50,7 +50,7 @@
   body
 ) = {
 
-  if language == "it" {
+  if strings == en_strings and language == "it" {
     strings = it_strings
   }
   
